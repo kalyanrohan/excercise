@@ -1,35 +1,25 @@
 import java.util.Scanner;
 
 public class Testing {
-    public static void main(String[] args) {
-        int myAge=18;
-        // string holds a more than 1 character while char only holds 1 character. char is a primitive data type
-        char myChar ='A';
-        int newNum= (int)myChar;
-        System.out.println(myChar);
-        System.out.println(newNum);
-        // yes you can but it stores the ASCII code of the character rather than the character itself
+    public static void main(String args[]){
+//creating two matrices
+        int a[][]={{1,1,1},{2,2,2},{3,3,3}};
+        int b[][]={{1,1,1},{2,2,2},{3,3,3}};
 
-        //assign
-        int tenYear = 10;
-        Scanner scanner = new Scanner(System.in);
+//creating another matrix to store the multiplication of two matrices
+        int c[][]=new int[3][3];  //3 rows and 3 columns
 
-        //input name
-        System.out.println("What's your name?");
-        String myName = scanner.next();
-
-        //input age
-        System.out.println("What's your age?");
-        int Age = scanner.nextInt();
-
-
-        //age 10 years from now
-        int AgeTen = Age + tenYear;
-
-        //print :slight_smile:
-        System.out.println("My name is " + myName + " and I will be " + AgeTen + " in ten years.");
-
-
-
+//multiplying and printing multiplication of 2 matrices
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                c[i][j]=0;
+                for(int k=0;k<3;k++)
+                {
+                    c[i][j]+=a[i][k]*b[k][j];
+                }//end of k loop
+                System.out.print(c[i][j]+" ");  //printing matrix element
+            }//end of j loop
+            System.out.println();//new line
+        }
     }
 }

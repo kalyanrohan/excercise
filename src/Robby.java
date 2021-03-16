@@ -48,10 +48,10 @@ public class Robby {
                    x=0;
                    y=0;
                    break;
-               default:
-                   System.out.println("Please input a valid choice!");
+
            }
        }
        while(choice!=4);
+       System.out.println("PROGRAM TERMINATED");
     }
 }
