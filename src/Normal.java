@@ -27,6 +27,7 @@ public class Normal {
         int counter = 0;
         for(int i = 0; i<txt.length(); i++){
             String s = txt.substring(i, i + 1).toLowerCase();
+            // can only compare strings using .equals()
             if(s.equals("a") || s.equals("e") || s.equals("i") || s.equals("o") || s.equals("u")){
                 counter++;
             }
