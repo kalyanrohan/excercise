@@ -1,59 +1,19 @@
-import java.util.Scanner;
-
-public class Testing {
+public class Testing{
     public static void main(String args[]){
-        String temp1;
-        String temp2;
-
-        String[] names = {"Monique", "Rohan", "Raphael", "Chris", "Morris"};
-        String[] colour = {"Blue", "Black", "Red", "Black", "Violet"};
-
-
-        for (int i = 0; i<5-1; i++)
-        {
-            for (int j = i+1 ; j<5; j++)
-            {
-                if (names[i].compareTo(names[j])>0)
-                {
-                    temp1 = names[i];
-                    temp2 = colour[i];
-                    names[i] = names [j];
-                    colour[i] = colour [j];
-                    names[j] = temp1;
-                    colour[j] = temp2;
+        int i,m=0,flag=0;
+        int n=3;//it is the number to be checked
+        m=n/2;
+        if(n==0||n==1){
+            System.out.println(n+" is not prime number");
+        }else{
+            for(i=2;i<=m;i++){
+                if(n%i==0){
+                    System.out.println(n+" is not prime number");
+                    flag=1;
+                    break;
                 }
             }
-        }
-
-        for (int i = 0; i<5; i++) {
-            System.out.print(names[i] + " ");
-            System.out.println(colour[i]);
-        }
-
-        String tempName;
-        String tempColour;
-
-        System.out.println("\n After sorted: ");
-        for (int i = 0; i<5-1; i++)
-        {
-            for (int j = i+1 ; j<5; j++)
-            {
-                if (colour[i].compareTo(colour[j])>0)
-                {
-                    tempName = names[i];
-                    tempColour = colour[i];
-                    names[i] = names [j];
-                    colour[i] = colour [j];
-                    names[j] = tempName;
-                    colour[j] = tempColour;
-                }
-            }
-        }
-
-        for (int i = 0; i<5; i++) {
-            System.out.print(names[i] +" ");
-            System.out.println(colour[i]);
-        }
-
+            if(flag==0)  { System.out.println(n+" is prime number"); }
+        }//end of else
     }
 }
